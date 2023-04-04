@@ -1,0 +1,21 @@
+<div class = "container-fluid">
+  <app-admin-navbar></app-admin-navbar>
+</div>
+<form>
+  <table class="table table-striped">
+  <tr><td><h1 style="text-align: center;">Add Genre:</h1></td>
+      <td><input type="text" name="genre" [(ngModel)]="genrez.genre"></td></tr>
+
+  <tr><td>
+        <button type="submit" (click)="addGenre()" class="btn btn-primary btn-lg">Add This Genre For Movies</button>
+          </td></tr>
+       </table>
+           </form>
+
+           <table class="table table-striped" >
+            <tr class="table-danger"><th>Genre ID</th><th>Genre Name</th></tr>
+            <tr class="table-info" *ngFor="let g of genres">
+                <td class="table-info">{{g.id}}</td>
+            <td>{{g.genre}}</td>
+            </tr>
+            </table>
